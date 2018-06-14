@@ -6,4 +6,4 @@ phases:
       - echo Nothing to do
 artifacts:
   files:
-    **/*
+    '**/*'
