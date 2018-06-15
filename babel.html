@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <main>
+        <label>Name: <input type="text" id="name" value=""></label>
+        <button id="btnSubmit" value="Click">Click me </button>
+        <div id="content">
+
+        </div>
+      </main>
+      <script type="text/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js">
+
+      </script>
+      <script type="text/babel" data-presets="latest">
+        const getMessage = (name) => `Welcome to JS, ${name}`;
+        const button = document.getElementById('btnSubmit');
+        button.addEventListener('click', (event) => {
+          let name = document.getElementById('name').value;
+          if (name.length < 2)
+            alert('MORE!!');
+          else
+            document.getElementById('content').textContent = getMessage(name)
+        });
+
+      </script>
+  </body>
+</html>
