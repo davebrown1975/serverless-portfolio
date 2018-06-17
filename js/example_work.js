@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ExampleWork extends React.Component {
+export default class ExampleWork extends React.Component {
   render() {
     return(
       <section className="section section--alignCentered section--description">
@@ -16,7 +16,7 @@ class ExampleWork extends React.Component {
   }
 }
 
-class ExampleWorkBubble extends React.Component {
+export class ExampleWorkBubble extends React.Component {
   render() {
     return(
       <div className="section__exampleWrapper">
@@ -35,5 +35,3 @@ class ExampleWorkBubble extends React.Component {
     )
   }
 }
-export default ExampleWork;
-export ExampleWorkBubble;
