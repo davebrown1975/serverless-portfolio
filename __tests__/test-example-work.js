@@ -20,7 +20,15 @@ const MYWORK = [
 describe ("Example work component", () => {
   let component = shallow(<ExampleWork work={MYWORK} />);
 
-  it("should be a section element", () => {
-      expect(component.type()).toEqual('section');
+  it("should be a span element", () => {
+      expect(component.type()).toEqual('span');
+  })
+
+  it("Should allow modal to open", () => {
+    component.instance().openModal();
+    expect(component.instance().state.modalOpen).toBe(true);
+
+    component.instance().closeModal();
+    expect(component.instance().state.modalOpen).toBe(false);
   })
 });
